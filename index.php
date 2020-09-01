@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php include 'config/bootstrap.php' ?>
+<?php include 'config/connection.php' ?>
+<?php include 'config/rupiahs.php' ?>
 
 <!-- Head -->
 <?php include 'layouts/head.php' ?>
@@ -27,8 +30,9 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Dashboard</h1>
+          <!-- Page Content -->
+          <?php include 'config/routes.php' ?>
+
 
         </div>
         <!-- /.container-fluid -->
