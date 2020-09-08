@@ -8,3 +8,12 @@
   <!-- Custom scripts for all pages-->
   <script src="<?= BASE_URL; ?>/assets/js/sb-admin-2.min.js"></script>
   <script src="<?= BASE_URL; ?>/assets/vendor/sweetalert2/sweetalert2.min.js"></script>
+
+  <!-- Data Tables -->
+  <script src="<?= BASE_URL; ?>/assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#tb_rekening').DataTable();
+    });
+  </script>

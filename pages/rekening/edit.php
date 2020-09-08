@@ -1,6 +1,6 @@
 <?php
 
-$id = $_GET['id'];
+$id = $_GET['result'];
 
 // Jika terdapat method POST[simpan] 
 if (isset($_POST['ubah'])) {

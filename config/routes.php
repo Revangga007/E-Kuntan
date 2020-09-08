@@ -4,6 +4,15 @@ if (isset($_GET['menu']) && isset($_GET['action'])) {
     $menu = $_GET['menu'];
     $action = $_GET['action'];
 
+    if ($menu == 'kategori' && $action == 'tambah') {
+        include 'pages/kategori/tambah.php';
+    } else
+    if ($menu == 'kategori' && $action == 'ubah') {
+        include 'pages/kategori/edit.php';
+    } else
+    if ($menu == 'kategori' && $action == 'hapus') {
+        include 'pages/kategori/hapus.php';
+    }
     if ($menu == 'rekening' && $action == 'tambah') {
         include 'pages/rekening/tambah.php';
     } else
@@ -12,14 +21,17 @@ if (isset($_GET['menu']) && isset($_GET['action'])) {
     } else
     if ($menu == 'rekening' && $action == 'hapus') {
         include 'pages/rekening/hapus.php';
+    } else
+    if ($menu == 'rekening' && (int) $action) {
+        include 'pages/rekening/index.php';
     }
 } else
 if (isset($_GET['menu'])) {
     if ($_GET['menu'] == "kategori") {
-        include 'pages/kategori/_table-kategori.php';
+        include 'pages/kategori/index.php';
     } else
     if ($_GET['menu'] == "rekening") {
-        include 'pages/rekening/_table-rekening.php';
+        include 'pages/rekening/index.php';
     } else
     if ($_GET['menu'] == "transaksi") {
         include 'pages/transaksi/_table-transaksi.php';
@@ -35,9 +47,24 @@ if (isset($_GET['menu'])) {
     } else
     if ($_GET['menu'] == "laporan") {
         include 'pages/laporan/laporan.php';
+    } else
+    if ($_GET['menu'] == "logout") {
+        include 'pages/logout.php';
+    } else 
+    if ($_GET['menu'] == "dashboard") {
+        include 'pages/dashboard.php';
     } else {
         include 'pages/404.php';
     }
 } else {
     include 'pages/dashboard.php';
 }
+
+
+// if(isset($_GET['menu'])){
+//     $menu = $_GET['menu'];
+
+//     if($menu == 'rekening'){
+//         if(isset($))
+//     }
+// }

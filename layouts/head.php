@@ -15,6 +15,7 @@
 
     <!-- Custom styles for this template-->
     <link href="<?= BASE_URL; ?>/assets/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/vendor/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="<?= BASE_URL; ?>/assets/vendor/sweetalert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="<?= BASE_URL; ?>/assets/vendor/datatables/dataTables.bootstrap4.min.css">
 
 </head>

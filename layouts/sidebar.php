@@ -1,7 +1,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= BASE_URL; ?>/">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= BASE_URL; ?>/dashboard">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fa fa-calculator" aria-hidden="true"></i>
             </div>
@@ -13,7 +13,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-            <a class="nav-link" href="<?= BASE_URL; ?>/">
+            <a class="nav-link" href="<?= BASE_URL; ?>/dashboard">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>

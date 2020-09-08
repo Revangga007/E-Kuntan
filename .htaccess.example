@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteRule ^login.php?$ login.php [L]
+RewriteRule ^([^/d]+)/?$ index.php?menu=$1 [QSA]
+RewriteRule ^([^/d]+)/([1-9]+)$ index.php?menu=$1&page=$2 [QSA]
+RewriteRule ^([^/d]+)/([^/d]+)$ index.php?menu=$1&action=$2 [QSA]
+RewriteRule ^([^/d]+)/([^/d]+)/([^/d]+)$ index.php?menu=$1&action=$2&result=$3 [QSA]
+
