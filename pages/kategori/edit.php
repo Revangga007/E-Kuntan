@@ -7,11 +7,13 @@ if (isset($_POST['ubah'])) {
 
     // Instance Variabel form
     $namaKategori = htmlspecialchars($_POST['nama_kategori']);
+    $jenis_transaksi = htmlspecialchars($_POST['jenis_transaksi']);
 
-    // Function Query ke table rekening
+    // Function Query ke table kategori
     $query = mysqli_query($connec, "UPDATE kategori SET
-                            nama_kategori = '$namaKategori'
-                            WHERE id = $id");
+                            nama_kategori = '$namaKategori',
+                            id_jenis_transaksi = $jenis_transaksi
+                            WHERE id = $id;");
 
     if ($query) { ?>
 

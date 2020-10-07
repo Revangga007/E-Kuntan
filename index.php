@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'config/baseUrl.php' ?>
-<?php include 'config/connection.php' ?>
-<?php include 'config/rupiahs.php' ?>
+<?php include 'config/baseUrl.php'; ?>
+<?php include 'config/connection.php'; ?>
+<?php include 'config/session.php'; ?>
+<?php include 'config/rupiahs.php'; ?>
 
 <!-- Head -->
 <?php include 'layouts/head.php' ?>

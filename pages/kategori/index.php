@@ -8,16 +8,29 @@
                         <a href="<?= BASE_URL; ?>/kategori/tambah" class="btn btn-sm btn-primary">Tambah</a>
                     </div>
                     <div class="col-auto ml-auto">
-                        <form method="POST" action="">
-                            <div class="input-group">
-                                <input type="text" class="form-control bg-light" id="keyword" name="keyword" placeholder="Cari Data..." autocomplete="off">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary" type="submit" name="search" id="search">
-                                        <i class="fas fa-search fa-sm"></i>
-                                    </button>
+                        <?php if (isset($_GET["keyword"])) { ?>
+                            <form method="POST" action="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control bg-light" id="keyword" name="keyword" placeholder="Cari Data..." autocomplete="off" value="<?= $_GET['keyword']; ?>">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="submit" id="search" name="search">
+                                            <i class="fas fa-search fa-sm"></i>
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        <?php } else { ?>
+                            <form method="POST" action="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control bg-light" id="keyword" name="keyword" placeholder="Cari Data..." autocomplete="off">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="submit" id="search" name="search">
+                                            <i class="fas fa-search fa-sm"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        <?php } ?>
                     </div>
                 </div>
                 <div id="table-content">

@@ -50,8 +50,8 @@
                                              <td><?= $rekening['pemilik_rekening']; ?></td>
                                              <td><?= rupiah($rekening['saldo_rekening']); ?></td>
                                              <td>
-                                                 <a href="<?= BASE_URL; ?>/rekening/ubah/<?= $rekening['id']; ?>" class="btn btn-sm btn-warning">Ubah</a>
-                                                 <a href="<?= BASE_URL; ?>/rekening/hapus/<?= $rekening['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('yakin?');">Hapus</a>
+                                                 <a href="<?= BASE_URL; ?>/rekening/ubah/<?= $rekening['id']; ?>" class="btn btn-sm btn-warning tombol-edit">Ubah</a>
+                                                 <a href="<?= BASE_URL; ?>/rekening/hapus/<?= $rekening['id']; ?>" class="btn btn-sm btn-danger tombol-hapus">Hapus</a>
                                              </td>
                                          </tr>
                                      <?php } ?>
@@ -128,3 +128,27 @@
                              <?php } ?>
                          </div>
                      </div>
+
+                     <script>
+                         $(document).ready(function() {
+                             $(".tombol-hapus").click(function(e) {
+
+                                 e.preventDefault();
+                                 const href = $(this).attr("href");
+
+                                 Swal.fire({
+                                     title: 'Apakah anda yakin?',
+                                     text: 'Data rekening akan terhapus',
+                                     icon: 'warning',
+                                     showCancelButton: true,
+                                     confirmButtonColor: '#3085d6',
+                                     cancelButtonColor: '#d33',
+                                     confirmButtonText: 'Yes'
+                                 }).then((result) => {
+                                     if (result.isConfirmed) {
+                                         document.location.href = href;
+                                     }
+                                 });
+                             });
+                         });
+                     </script>

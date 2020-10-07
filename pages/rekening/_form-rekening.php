@@ -26,7 +26,7 @@
                             <input type="text" name="saldo_rekening" id="saldo_rekening" class="form-control" placeholder="Masukkan Saldo Rekening" value="<?= $rekening['saldo_rekening']; ?>" required>
                         </div>
                         <div class="mt-5">
-                            <button type="submit" class="btn btn-success" name="ubah">Simpan</button>
+                            <button type="submit" class="btn btn-success tombol-simpan" name="ubah">Simpan</button>
                             <a href="<?= BASE_URL; ?>/rekening" class="btn btn-danger">Batal</a>
                         </div>
                     </form>
@@ -49,7 +49,7 @@
                             <input type="text" name="saldo_rekening" id="saldo-rekening" class="form-control" placeholder="Masukkan Saldo Rekening" required>
                         </div>
                         <div class="mt-5">
-                            <button type="submit" class="btn btn-success" name="tambah">Simpan</button>
+                            <button type="submit" class="btn btn-success tombol-simpan" name="tambah">Simpan</button>
                             <a href="<?= BASE_URL; ?>/rekening" class="btn btn-danger">Batal</a>
                         </div>
                     </form>

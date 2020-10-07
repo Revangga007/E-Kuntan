@@ -1,10 +1,17 @@
 <?php
 
-if (isset($_POST['keyword'])) {
-    $keyword = $_POST['keyword']; ?>
-    <script>
-        document.location.href = "<?= BASE_URL; ?>/rekening/search/<?= $keyword ?>"
-    </script>
+if (isset($_POST['search'])) {
+    $keyword = $_POST['keyword'];
+    if (empty($keyword)) { ?>
+        <script>
+            document.location.href = "<?= BASE_URL; ?>/rekening"
+        </script>
+    <?php } else { ?>
+        ?>
+        <script>
+            document.location.href = "<?= BASE_URL; ?>/rekening/search/<?= $keyword ?>"
+        </script>
+    <?php } ?>
 <?php }
 
 

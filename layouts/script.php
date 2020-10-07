@@ -1,5 +1,5 @@
   <!-- Bootstrap core JavaScript-->
-  <script src="<?= BASE_URL; ?>/assets/vendor/jquery/jquery.min.js"></script>
+
   <script src="<?= BASE_URL; ?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
@@ -11,9 +11,3 @@
 
   <!-- Data Tables -->
   <script src="<?= BASE_URL; ?>/assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-  <script>
-    $(document).ready(function() {
-      $('#tb_rekening').DataTable();
-    });
-  </script>

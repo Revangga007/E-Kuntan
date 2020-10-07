@@ -5,9 +5,10 @@ if (isset($_POST['tambah'])) {
 
     // Instance Variabel form
     $namaKategori = htmlspecialchars($_POST['nama_kategori']);
+    $jenis_transaksi = htmlspecialchars($_POST['jenis_transaksi']);
 
     // Function Query ke table rekening
-    $query = mysqli_query($connec, "INSERT INTO kategori VALUES ('','$namaKategori');");
+    $query = mysqli_query($connec, "INSERT INTO kategori VALUES ('','$namaKategori',$jenis_transaksi);");
 
     if ($query) { ?>
 

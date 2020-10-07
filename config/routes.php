@@ -22,8 +22,14 @@ if (isset($_GET['menu']) && isset($_GET['action'])) {
     if ($menu == 'rekening' && $action == 'hapus') {
         include 'pages/rekening/hapus.php';
     } else
-    if ($menu == 'rekening' && (int) $action) {
-        include 'pages/rekening/index.php';
+    if ($menu == 'pengguna' && $action == 'tambah') {
+        include 'pages/pengguna/tambah.php';
+    } else
+    if ($menu == 'pengguna' && $action == 'ubah') {
+        include 'pages/pengguna/edit.php';
+    } else
+    if ($menu == 'pengguna' && $action == 'hapus') {
+        include 'pages/pengguna/hapus.php';
     }
 } else
 if (isset($_GET['menu'])) {
@@ -43,7 +49,7 @@ if (isset($_GET['menu'])) {
         include 'pages/piutang/_table-piutang.php';
     } else
     if ($_GET['menu'] == "pengguna") {
-        include 'pages/pengguna/_table-pengguna.php';
+        include 'pages/pengguna/index.php';
     } else
     if ($_GET['menu'] == "laporan") {
         include 'pages/laporan/laporan.php';

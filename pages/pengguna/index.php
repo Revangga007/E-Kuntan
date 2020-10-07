@@ -1,11 +1,11 @@
-<h1 class="h3 mb-4 text-gray-800">Data Rekening</h1>
+<h1 class="h3 mb-4 text-gray-800">Data pengguna</h1>
 <div class="row">
     <div class="col">
         <div class="card mb-4">
             <div class="card-body">
                 <div class="row mb-3">
                     <div class="col-6">
-                        <a href="<?= BASE_URL; ?>/rekening/tambah" class="btn btn-sm btn-primary">Tambah</a>
+                        <a href="<?= BASE_URL; ?>/pengguna/tambah" class="btn btn-sm btn-primary">Tambah</a>
                     </div>
                     <div class="col-auto ml-auto">
                         <?php if (isset($_GET["keyword"])) { ?>
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div id="table-content">
-                    <?php include 'pages/rekening/_table-rekening.php'; ?>
+                    <?php include 'pages/pengguna/_table-pengguna.php'; ?>
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
             }
         }
 
-        xhttp.open('POST', 'pages/rekening/cari.php', true);
+        xhttp.open('POST', 'pages/pengguna/cari.php', true);
         xhttp.send();
 
     });
@@ -68,7 +68,7 @@
     $(document).ready(function() {
 
         $('#keyword').on('keyup', function() {
-            $('#table-content').load('pages/rekening/cari.php?keyword=' + $('#keyword').val());
+            $('#table-content').load('pages/pengguna/cari.php?keyword=' + $('#keyword').val());
         });
 
     });
