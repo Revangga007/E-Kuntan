@@ -1,9 +1,9 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <?php include 'config/baseUrl.php'; ?>
+  <?php include 'config/session_login.php'; ?>
   <?php include 'config/connection.php';  ?>
   <?php include 'pages/login.php'; ?>
   <meta charset="utf-8">
