@@ -1,5 +1,7 @@
 <?php
 
+
+
 if (isset($_POST['login'])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -11,10 +13,12 @@ if (isset($_POST['login'])) {
         $data = mysqli_fetch_assoc($user);
         if (password_verify($password, $data["password"])) {
 
-            $_SESSION["login"] = 1;
-            $_SESSION["id"] = $data["id"];
-            $_SESSION["nama"] = $data["nama"];
-            $_SESSION["status"] = $data["status"];
+            $_SESSION["login"] = $data;
+
+            if (isset($_POST["remember"])) {
+                setcookie("id", $data["id"], time() + 604800);
+                setcookie("key1", hash('sha256', $data["username"]), time() + 604800);
+            }
             ?>
             <script>
                 document.location.href = "<?= BASE_URL; ?>/dashboard";

@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php
+session_start();
+include 'config/connection.php';
+include 'config/cookie_login.php';
+include 'config/session_login.php';
+include 'config/baseUrl.php';
+include 'pages/login.php';
+?>
+
 <head>
-  <?php include 'config/baseUrl.php'; ?>
-  <?php include 'config/session_login.php'; ?>
-  <?php include 'config/connection.php';  ?>
-  <?php include 'pages/login.php'; ?>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
