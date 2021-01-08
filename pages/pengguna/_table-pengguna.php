@@ -39,15 +39,17 @@
                                     $no = $dataAwal + 1;
 
                                     while ($pengguna = mysqli_fetch_assoc($queryData)) {
-                                        ?>
+                                    ?>
                                      <tbody>
                                          <tr>
                                              <th scope="row"><?= $no++; ?></th>
-                                             <td><?= $pengguna['nama']; ?></td>
-                                             <td><?= $pengguna['status']; ?></td>
+                                             <td><?= $pengguna['nama_pengguna']; ?></td>
+                                             <td><?= $pengguna['status_pengguna']; ?></td>
                                              <td>
                                                  <a href="<?= BASE_URL; ?>/pengguna/ubah/<?= $pengguna['id']; ?>" class="btn btn-sm btn-warning tombol-edit">Ubah</a>
-                                                 <a href="<?= BASE_URL; ?>/pengguna/hapus/<?= $pengguna['id']; ?>" name="hapus" class="btn btn-sm btn-danger tombol-hapus">Hapus</a>
+                                                 <?php if ($pengguna['id'] != 1) { ?>
+                                                     <a href="<?= BASE_URL; ?>/pengguna/hapus/<?= $pengguna['id']; ?>" class="btn btn-sm btn-danger tombol-hapus">Hapus</a>
+                                                 <?php } ?>
                                              </td>
                                          </tr>
                                      <?php } ?>

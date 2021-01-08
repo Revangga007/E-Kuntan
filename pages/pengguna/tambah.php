@@ -10,6 +10,7 @@ if (isset($_POST['tambah'])) {
     $password = mysqli_real_escape_string($connec, $_POST['password']);
     $password2 = mysqli_real_escape_string($connec, $_POST['password2']);
     $status =  htmlspecialchars($_POST['status_pengguna']);
+    $foto = 'user.jpg';
 
     $cekUser = mysqli_query($connec, "SELECT username from akun WHERE username = '$username'");
     if (mysqli_fetch_assoc($cekUser)) {
@@ -29,7 +30,7 @@ if (isset($_POST['tambah'])) {
     $password = password_hash($password, PASSWORD_DEFAULT);
 
     // Function Query ke table rekening
-    $query = mysqli_query($connec, "INSERT INTO akun VALUES ('','$namaPengguna','$username','$password','$status');");
+    $query = mysqli_query($connec, "INSERT INTO akun VALUES ('','$namaPengguna','$username','$password','$status','$foto');");
 
     if ($query) { ?>
 

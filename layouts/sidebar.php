@@ -33,12 +33,14 @@
                 <span>Kategori</span></a>
         </li>
 
-        <!-- Nav Item - Rekening -->
-        <li class="nav-item">
-            <a class="nav-link" href="<?= BASE_URL; ?>/rekening">
-                <i class="fa fa-credit-card" aria-hidden="true"></i>
-                <span>Rekening</span></a>
-        </li>
+        <?php if ($_SESSION["login"]["status_pengguna"] == 'Admin') { ?>
+            <!-- Nav Item - Rekening -->
+            <li class="nav-item">
+                <a class="nav-link" href="<?= BASE_URL; ?>/rekening">
+                    <i class="fa fa-credit-card" aria-hidden="true"></i>
+                    <span>Rekening</span></a>
+            </li>
+        <?php } ?>
         <!-- Nav Item - Transaksi -->
         <li class="nav-item">
             <a class="nav-link" href="<?= BASE_URL; ?>/transaksi">
@@ -60,19 +62,24 @@
                 </div>
             </div>
         </li>
-        <!-- Nav Item - Pengguna Collapse Menu -->
-        <li class="nav-item">
-            <a class="nav-link" href="<?= BASE_URL; ?>/pengguna">
-                <i class="fas fa-user"></i>
-                <span>Pengguna</span></a>
-        </li>
 
-        <!-- Nav Item - Charts -->
-        <li class="nav-item">
-            <a class="nav-link" href="<?= BASE_URL; ?>/laporan">
-                <i class="fas fa-fw fa-chart-area"></i>
-                <span>Laporan</span></a>
-        </li>
+        <?php if ($_SESSION["login"]['status_pengguna'] == 'Admin') { ?>
+            <!-- Nav Item - Pengguna Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="<?= BASE_URL; ?>/pengguna">
+                    <i class="fas fa-user"></i>
+                    <span>Pengguna</span></a>
+            </li>
+        <?php } ?>
+
+        <?php if ($_SESSION["login"]['status_pengguna'] == 'Admin') { ?>
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="<?= BASE_URL; ?>/laporan">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Laporan</span></a>
+            </li>
+        <?php } ?>
 
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">

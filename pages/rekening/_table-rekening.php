@@ -41,7 +41,7 @@
                                     $no = $dataAwal + 1;
 
                                     while ($rekening = mysqli_fetch_assoc($queryData)) {
-                                        ?>
+                                    ?>
                                      <tbody>
                                          <tr>
                                              <th scope="row"><?= $no++; ?></th>
@@ -51,7 +51,9 @@
                                              <td><?= rupiah($rekening['saldo_rekening']); ?></td>
                                              <td>
                                                  <a href="<?= BASE_URL; ?>/rekening/ubah/<?= $rekening['id']; ?>" class="btn btn-sm btn-warning tombol-edit">Ubah</a>
-                                                 <a href="<?= BASE_URL; ?>/rekening/hapus/<?= $rekening['id']; ?>" class="btn btn-sm btn-danger tombol-hapus">Hapus</a>
+                                                 <?php if ($rekening['id'] != 1) { ?>
+                                                     <a href="<?= BASE_URL; ?>/rekening/hapus/<?= $rekening['id']; ?>" class="btn btn-sm btn-danger tombol-hapus">Hapus</a>
+                                                 <?php } ?>
                                              </td>
                                          </tr>
                                      <?php } ?>

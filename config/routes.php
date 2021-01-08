@@ -30,11 +30,17 @@ if (isset($_GET['menu']) && isset($_GET['action'])) {
     } else
     if ($menu == 'pengguna' && $action == 'hapus') {
         include 'pages/pengguna/hapus.php';
+    } else
+    if ($menu == 'profil' && $action == 'lihat') {
+        include 'pages/profile.php';
+    } else
+    if ($menu == 'password' && $action == 'ubah') {
+        include 'pages/ubahPassword.php';
     }
 } else
 if (isset($_GET['menu'])) {
-    if ($_GET['menu'] == "kategori") {
-        include 'pages/kategori/index.php';
+    if ($_GET['menu'] == "logout") {
+        include 'pages/logout.php';
     } else
     if ($_GET['menu'] == "rekening") {
         include 'pages/rekening/index.php';
@@ -54,8 +60,8 @@ if (isset($_GET['menu'])) {
     if ($_GET['menu'] == "laporan") {
         include 'pages/laporan/laporan.php';
     } else
-    if ($_GET['menu'] == "logout") {
-        include 'pages/logout.php';
+    if ($_GET['menu'] == "kategori") {
+        include 'pages/kategori/index.php';
     } else 
     if ($_GET['menu'] == "dashboard") {
         include 'pages/dashboard.php';

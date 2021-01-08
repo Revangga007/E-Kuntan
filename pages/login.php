@@ -1,8 +1,7 @@
 <?php
 
-
-
 if (isset($_POST['login'])) {
+
     $username = $_POST["username"];
     $password = $_POST["password"];
 
@@ -19,7 +18,7 @@ if (isset($_POST['login'])) {
                 setcookie("id", $data["id"], time() + 604800);
                 setcookie("key1", hash('sha256', $data["username"]), time() + 604800);
             }
-            ?>
+?>
             <script>
                 document.location.href = "<?= BASE_URL; ?>/dashboard";
             </script>

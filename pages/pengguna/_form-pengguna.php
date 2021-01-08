@@ -1,13 +1,12 @@
-<h1 class="h3 mb-4 text-gray-800">Tambah pengguna</h1>
-
+<h1 class="h3 mb-4 text-gray-800"><?= (isset($id)) ? 'Edit Pengguna' : 'Tambah Pengguna'; ?></h1>
 <div class="row d-flex justify-content-center">
     <div class="col-10">
         <div class="card mb-4">
             <div class="card-body">
                 <?php if (isset($id)) {
-                    $query = mysqli_query($connec, "SELECT * FROM pengguna WHERE id = '$id'");
+                    $query = mysqli_query($connec, "SELECT * FROM akun WHERE id = '$id'");
                     $pengguna = mysqli_fetch_assoc($query);
-                    ?>
+                ?>
                     <form method="POST" action="">
                         <div class="form-group">
                             <label for="nama-pengguna">Nama Pengguna</label>
@@ -19,13 +18,13 @@
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input type="password" name="password" id="password" class="form-control" placeholder="Masukkan Password Pengguna" value="<?= $pengguna['password']; ?>" disabled>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Kosongkan password bila tidak ingin diganti">
                         </div>
                         <div class="form-group">
                             <label for="saldo-pengguna">Status Pengguna</label>
                             <select class="form-control" id="status-pengguna" name="status_pengguna">
-                                <option value="Admin">Admin</option>
-                                <option value="Karyawan">Karyawan</option>
+                                <option value="Admin" <?= ($pengguna['status_pengguna'] == 'Admin') ? 'Selected' : ''; ?>>Admin</option>
+                                <option value="Karyawan" <?= ($pengguna['status_pengguna'] == 'Karyawan') ? 'Selected' : ''; ?>>Karyawan</option>
                             </select>
                         </div>
                         <div class="mt-5">
@@ -34,7 +33,7 @@
                         </div>
                     </form>
                 <?php } else { ?>
-                    <form method="POST" action="">
+                    <form method="POST" action="" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="nama-pengguna">Nama Pengguna</label>
                             <input type="text" name="nama_pengguna" id="nama-pengguna" class="form-control" placeholder="Masukan Nama Pengguna" required>

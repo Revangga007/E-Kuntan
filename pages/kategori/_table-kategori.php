@@ -42,7 +42,7 @@
                                     $no = $dataAwal + 1;
 
                                     while ($kategori = mysqli_fetch_assoc($queryData)) {
-                                        ?>
+                                    ?>
                                      <tbody>
                                          <tr>
                                              <th scope="row"><?= $no++; ?></th>
@@ -63,29 +63,29 @@
                                      <ul class="pagination pagination-sm justify-content-end">
                                          <?php if ($halaman == 1) { ?>
                                              <li class="page-item disabled">
-                                                 <a class="page-link" href="<?= BASE_URL; ?>/rekening/<?= $sebelumnya; ?>" tabindex="-1" aria-disabled="true">Previous</a>
+                                                 <a class="page-link" href="<?= BASE_URL; ?>/kategori/<?= $sebelumnya; ?>" tabindex="-1" aria-disabled="true">Previous</a>
                                              </li>
                                          <?php } else { ?>
                                              <li class="page-item">
-                                                 <a class="page-link" href="<?= BASE_URL; ?>/rekening/<?= $sebelumnya; ?>" tabindex="-1" aria-disabled="true">Previous</a>
+                                                 <a class="page-link" href="<?= BASE_URL; ?>/kategori/<?= $sebelumnya; ?>" tabindex="-1" aria-disabled="true">Previous</a>
                                              </li>
                                          <?php } ?>
 
                                          <?php for ($i = 1; $i <= $totalHalaman; $i++) { ?>
                                              <?php if ($i == $halaman) { ?>
-                                                 <li class="page-item active"><a class="page-link" href="<?= BASE_URL; ?>/rekening/<?= $i; ?>"><?= $i; ?></a></li>
+                                                 <li class="page-item active"><a class="page-link" href="<?= BASE_URL; ?>/kategori/<?= $i; ?>"><?= $i; ?></a></li>
                                              <?php } else { ?>
-                                                 <li class="page-item"><a class="page-link" href="<?= BASE_URL; ?>/rekening/<?= $i; ?>"><?= $i; ?></a></li>
+                                                 <li class="page-item"><a class="page-link" href="<?= BASE_URL; ?>/kategori/<?= $i; ?>"><?= $i; ?></a></li>
                                              <?php } ?>
                                          <?php } ?>
 
                                          <?php if ($halaman == $totalHalaman) { ?>
                                              <li class="page-item disabled">
-                                                 <a class="page-link" href="<?= BASE_URL; ?>/rekening/<?= $selanjutnya; ?>">Next</a>
+                                                 <a class="page-link" href="<?= BASE_URL; ?>/kategori/<?= $selanjutnya; ?>">Next</a>
                                              </li>
                                          <?php } else { ?>
                                              <li class="page-item">
-                                                 <a class="page-link" href="<?= BASE_URL; ?>/rekening/<?= $selanjutnya; ?>">Next</a>
+                                                 <a class="page-link" href="<?= BASE_URL; ?>/kategori/<?= $selanjutnya; ?>">Next</a>
                                              </li>
                                          <?php } ?>
                                      </ul>

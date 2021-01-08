@@ -4,7 +4,7 @@
 $host = 'localhost';
 $user = 'root';
 $password = '';
-$db = 'e-kuntan';
+$db = 'e-kuntan_182300017';
 $port = 3306;
 
 // Function koneksi php ke mysql

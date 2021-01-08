@@ -6,29 +6,39 @@ $id = $_GET['result'];
 if (isset($_POST['ubah'])) {
 
     // Instance Variabel form
-    $namaBank = htmlspecialchars($_POST['nama_bank']);
-    $noRekening = htmlspecialchars($_POST['no_rekening']);
-    $pemilikRekening = htmlspecialchars($_POST['pemilik_rekening']);
-    $saldoRekening = htmlspecialchars($_POST['saldo_rekening']);
+    $namaPengguna = htmlspecialchars($_POST['nama_pengguna']);
+    $username = strtolower(stripcslashes($_POST['username']));
+    if (!empty($_POST['password'])) {
+        $password = mysqli_real_escape_string($connec, $_POST['password']);
+        $password = password_hash($password, PASSWORD_DEFAULT);
+    }
+    $status =  htmlspecialchars($_POST['status_pengguna']);
 
-    // Function Query ke table rekening
-    $query = mysqli_query($connec, "UPDATE rekening SET
-                            nama_bank = '$namaBank',
-                            no_rekening = '$noRekening',
-                            pemilik_rekening = '$pemilikRekening',
-                            saldo_rekening = '$saldoRekening'
+    if (!empty($_POST['password'])) {
+        $query = mysqli_query($connec, "UPDATE akun SET
+                            nama_pengguna = '$namaPengguna',
+                            username = '$username',
+                            password = '$password',
+                            status_pengguna = '$status'
                             WHERE id = $id");
+    } else {
+        $query = mysqli_query($connec, "UPDATE akun SET
+                            nama_pengguna = '$namaPengguna',
+                            username = '$username',
+                            status_pengguna = '$status'
+                            WHERE id = $id");
+    }
 
     if ($query) { ?>
 
         <script>
             alert('data berhasil diubah');
-            document.location.href = "<?= BASE_URL; ?>/rekening";
+            document.location.href = "<?= BASE_URL; ?>/pengguna";
         </script>
 
 <?php
     }
 }
 
-include 'pages/rekening/_form-rekening.php';
+include 'pages/pengguna/_form-pengguna.php';
 ?>

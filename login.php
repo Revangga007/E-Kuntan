@@ -3,10 +3,10 @@
 
 <?php
 session_start();
+include 'config/baseUrl.php';
 include 'config/connection.php';
 include 'config/cookie_login.php';
 include 'config/session_login.php';
-include 'config/baseUrl.php';
 include 'pages/login.php';
 ?>
 
@@ -22,7 +22,7 @@ include 'pages/login.php';
   <!-- Custom fonts for this template-->
   <link href="<?= BASE_URL; ?>/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="<?= BASE_URL; ?>/assets/vendor/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
-  <script src="<?= BASE_URL; ?>assets/vendor/jquery/jquery.min.js"></script>
+  <script src="<?= BASE_URL; ?>/assets/vendor/jquery/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
@@ -51,7 +51,7 @@ include 'pages/login.php';
                   </div>
                 </div>
               <?php endif; ?>
-              <form class="user" method="POST">
+              <form class="user" method="POST" action="">
                 <div class="form-group">
                   <input type="text" class="form-control form-control-user" id="username" name="username" placeholder="Masukkan Username Anda" required>
                 </div>
@@ -80,14 +80,14 @@ include 'pages/login.php';
 
   <!-- Bootstrap core JavaScript-->
 
-  <script src="<?= BASE_URL; ?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= BASE_URL; ?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="<?= BASE_URL; ?>assets/vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="<?= BASE_URL; ?>assets/vendor/sweetalert2/sweetalert2.min.js"></script>
+  <script src="<?= BASE_URL; ?>/assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="<?= BASE_URL; ?>/assets/vendor/sweetalert2/sweetalert2.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="<?= BASE_URL; ?>assets/js/sb-admin-2.min.js"></script>
+  <script src="<?= BASE_URL; ?>/assets/js/sb-admin-2.min.js"></script>
 
 </body>
 
