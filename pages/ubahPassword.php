@@ -9,6 +9,13 @@ if (isset($_POST['ubah'])) {
     $query = mysqli_query($connec, "UPDATE akun SET
                             password = '$password'
                             WHERE id = $id");
+?>
+    <script>
+        alert('Password berhasil dihapus');
+        document.location.href = "<?= BASE_URL ?>/dashboard";
+    </script>
+
+<?php
 }
 ?>
 

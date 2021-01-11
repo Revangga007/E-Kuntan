@@ -46,13 +46,13 @@ if (isset($_GET['menu'])) {
         include 'pages/rekening/index.php';
     } else
     if ($_GET['menu'] == "transaksi") {
-        include 'pages/transaksi/_table-transaksi.php';
+        include 'pages/transaksi/index.php';
     } else
     if ($_GET['menu'] == "hutang") {
-        include 'pages/hutang/_table-hutang.php';
+        include 'pages/hutang/index.php';
     } else
     if ($_GET['menu'] == "piutang") {
-        include 'pages/piutang/_table-piutang.php';
+        include 'pages/piutang/index.php';
     } else
     if ($_GET['menu'] == "pengguna") {
         include 'pages/pengguna/index.php';

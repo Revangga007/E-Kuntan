@@ -8,7 +8,7 @@ if (isset($_COOKIE["id"]) && isset($_COOKIE["key1"])) {
 
     $data = mysqli_fetch_assoc($query);
 
-    if ($_COOKIE["key1"] === hash('sha256', $data["username"])) {
+    if ($_COOKIE["key1"] == hash('sha256', $data["username"])) {
         $_SESSION["login"] = $data;
     }
 }
