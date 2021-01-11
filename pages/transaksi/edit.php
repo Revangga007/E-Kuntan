@@ -13,7 +13,7 @@ if (isset($_POST['ubah'])) {
     $query = mysqli_query($connec, "UPDATE transaksi SET
                             nama_transaksi = '$namatransaksi',
                             id_jenis_transaksi = $jenis_transaksi
-                            WHERE id = $id;");
+                            WHERE id_trx = $id;");
 
     if ($query) { ?>
 

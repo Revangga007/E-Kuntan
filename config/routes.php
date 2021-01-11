@@ -39,7 +39,7 @@ if (isset($_GET['menu']) && isset($_GET['action'])) {
     } else
     if ($menu == 'transaksi' && $action == 'hapus') {
         include 'pages/transaksi/hapus.php';
-    }
+    } else
     if ($menu == 'profil' && $action == 'lihat') {
         include 'pages/profile.php';
     } else
@@ -67,7 +67,7 @@ if (isset($_GET['menu'])) {
         include 'pages/pengguna/index.php';
     } else
     if ($_GET['menu'] == "laporan") {
-        include 'pages/laporan/laporan.php';
+        include 'pages/laporan/index.php';
     } else
     if ($_GET['menu'] == "kategori") {
         include 'pages/kategori/index.php';
