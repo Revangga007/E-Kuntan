@@ -21,7 +21,6 @@ if (isset($_GET['keyword'])) {
 
     // Untuk Meminta informasi baris ke database
     $queryBaris = mysqli_query($connec, "SELECT * FROM rekening WHERE
-                                id LIKE '%$keyword%' OR
                                 nama_bank LIKE '%$keyword%' OR
                                 no_rekening LIKE '%$keyword%' OR
                                 pemilik_rekening LIKE '%$keyword%' OR
@@ -34,7 +33,6 @@ if (isset($_GET['keyword'])) {
     $totalHalaman = ceil($totalBaris / $batas);
 
     $queryData = mysqli_query($connec, "SELECT * FROM rekening WHERE
-                                id LIKE '%$keyword%' OR
                                 nama_bank LIKE '%$keyword%' OR
                                 no_rekening LIKE '%$keyword%' OR
                                 pemilik_rekening LIKE '%$keyword%' OR

@@ -31,6 +31,15 @@ if (isset($_GET['menu']) && isset($_GET['action'])) {
     if ($menu == 'pengguna' && $action == 'hapus') {
         include 'pages/pengguna/hapus.php';
     } else
+    if ($menu == 'transaksi' && $action == 'tambah') {
+        include 'pages/transaksi/tambah.php';
+    } else
+    if ($menu == 'transaksi' && $action == 'ubah') {
+        include 'pages/transaksi/edit.php';
+    } else
+    if ($menu == 'transaksi' && $action == 'hapus') {
+        include 'pages/transaksi/hapus.php';
+    }
     if ($menu == 'profil' && $action == 'lihat') {
         include 'pages/profile.php';
     } else

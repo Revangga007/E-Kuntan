@@ -64,8 +64,8 @@
                                              <td><?= ($transaksi['id_jenis_transaksi'] == 1) ? rupiah($transaksi['nominal']) : ''; ?></td>
                                              <td><?= ($transaksi['id_jenis_transaksi'] == 1) ? '' : rupiah($transaksi['nominal']); ?></td>
                                              <td>
-                                                 <a href="<?= BASE_URL; ?>/transaksi/ubah/<?= $transaksi['id']; ?>" class="btn btn-sm btn-warning tombol-edit">Ubah</a>
-                                                 <a href="<?= BASE_URL; ?>/transaksi/hapus/<?= $transaksi['id']; ?>" class="btn btn-sm btn-danger tombol-hapus">Hapus</a>
+                                                 <a href="<?= BASE_URL; ?>/transaksi/ubah/<?= $transaksi['id_trx']; ?>" class="btn btn-sm btn-warning tombol-edit">Ubah</a>
+                                                 <a href="<?= BASE_URL; ?>/transaksi/hapus/<?= $transaksi['id_trx']; ?>" class="btn btn-sm btn-danger tombol-hapus">Hapus</a>
                                              </td>
                                          </tr>
                                      <?php } ?>
